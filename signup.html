@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    /* border:1px solid red; */
+    width:400px;
+    margin:80px auto;
+    text-align: center;
+    padding-top: 40px;
+    background-color: teal;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    height:450px;
+}
+
+h2{
+    color:white;
+    letter-spacing: 3px;
+    font-weight: lighter;
+}
+
+.container > form{
+    display:flex;
+    flex-direction: column;
+    width:70%;
+    /* border:1px solid black; */
+    margin:50px auto;
+    gap:15px;
+}
+
+form>input,button{
+    height: 40px;
+}
+
+form > input{
+    padding-left: 15px;
+    border:none;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+form > input::placeholder{
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+
+#btn,button{
+    cursor: pointer;
+    background-color: #17A589;
+    border:none;
+    color:white;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+form > button:nth-child(2){
+    padding-bottom:50px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>- Visitor -</h2>
+        <form action="">
+            <input id="name" placeholder="Full name" type="text">
+            <input id="email" placeholder="Email" type="email">
+            <input id="organisation" placeholder="Organization" type="text">
+            <button>SIGN UP</button>
+            <button>RETURN</button>
+        </form>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    let form = document.querySelector("form");
+function showInfo() {
+    event.preventDefault();
+    let obj = {
+        name: form.name.value,
+        email: form.email.value,
+        organisation: form.organisation.value
+    }
+    alert(obj.name+" "+"Welcome to masai school")
+}
+form.addEventListener("submit", showInfo);
+</script>
