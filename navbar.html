@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>nav bar</title>
+    <style>
+        #container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            background-color: rgb(13, 12, 31);
+            border-radius: 17px;
+        }
+        
+        #container>#right {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
+        #container>#right>div>h3 {
+            color: white;
+        }
+        
+        #container>#left>h3 {
+            color: white;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="left">
+            <h3>reebok</h3>
+        </div>
+        <div id="right">
+            <div>
+                <h3>men</h3>
+            </div>
+            <div>
+                <h3>women</h3>
+            </div>
+            <div>
+                <h3>login</h3>
+            </div>
+            <div>
+                <h3>signup</h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
